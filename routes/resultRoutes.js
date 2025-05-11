@@ -5,13 +5,8 @@ const router = express.Router();
 const axios = require("axios");
 
 
-
-router.get("/get-resumes", async (req, res) => {
-    res.json({ message: "This is a test response." });
-});
-
-router.get("", async (req, res) => {
-    res.json({ message: "This is a inside /api/results" });
+router.get("/health", async (req, res) => {
+    res.json({ message: "This is a inside v1 health" });
 });
 
 router.post("/get-resumes", getResumes);

@@ -8,9 +8,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/api", resultRoutes);
+app.use("/api/v1", resultRoutes);
 // Test route
-app.get("/", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.send("Server is running");
 });
 
